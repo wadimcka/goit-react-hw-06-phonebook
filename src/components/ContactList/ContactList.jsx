@@ -17,12 +17,9 @@ function ContactList() {
     dispatch(deleteContact(id));
   };
 
-  const filteredContacts = filter
-    ? contacts.filter(contact =>
-        contact.name.toLowerCase().includes(filter.toLowerCase())
-      )
-    : contacts;
-
+  const filteredContacts = contacts.filter(contact =>
+    contact.name.toLowerCase().includes(filter.toLowerCase())
+  );
   return (
     <ListOfContacts>
       {filteredContacts &&
